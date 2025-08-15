@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Name</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+<div class="container">
+    <h1>💖 Welcome 💖</h1>
+    <p>Enter your name to unlock your surprise:</p>
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <button onclick="startSurprise()">Start</button>
+</div>
+<script>
+function startSurprise() {
+    const name = document.getElementById('nameInput').value.trim();
+    if(name) {
+        localStorage.setItem('gfName', name);
+        window.location.href = 'birthday.html';
+    } else {
+        alert('Please enter your name ❤️');
+    }
+}
+</script>
+</body>
+</html>
