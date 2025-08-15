@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: radial-gradient(circle, #ffb6c1, #ff69b4);
+    color: white;
+}
+.index-page .container {
+    padding-top: 20%;
+}
+.index-page input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.index-page button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    background: hotpink;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.birthday-page .overlay {
+    position: relative;
+    z-index: 2;
+    padding-top: 5%;
+}
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.media-container img, .media-container video {
+    border-radius: 50%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    animation: float 5s infinite ease-in-out;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.confetto {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+    animation-name: fall;
+    animation-timing-function: linear;
+}
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
